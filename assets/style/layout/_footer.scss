@@ -1,0 +1,10 @@
+@use "../abstracts/mediaQuery" as *;
+
+.l-footer {
+  // css code
+  padding: 20px;
+  height: 150px;
+  width: 100%;
+  border: 1px solid #222222;
+  background-color: white;
+}

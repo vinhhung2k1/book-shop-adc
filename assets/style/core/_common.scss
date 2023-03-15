@@ -1,0 +1,22 @@
+.modal-bg {
+  background-color: #cacaca;
+  opacity: 0.6;
+}
+body.modal-open {
+  overflow: hidden;
+}
+a {
+  color: inherit !important;
+  text-decoration: inherit !important;
+}
+html {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
+  textarea {
+    border: 1px solid black;
+  }
+}
+.d-webkit-box {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100;
+}
+
+@layer utilities {
+  .bg-header {
+    background-color: aquamarine;
+  }
+  .bg-sidebar {
+    background-color: #faf7f7;
+  }
+  .bg-footer-upper {
+    background-color: #ededf0;
+  }
+  .text-moderate-blue {
+    color: hsl(238, 40%, 52%);
+  }
+  .bg-dark-blue {
+    background-color: hsl(212, 24%, 26%);
+  }
+  .text-greyish-blue {
+    color: hsl(211, 10%, 45%);
+  }
+  .bg-light-grayish-blue {
+    background-color: hsl(239, 57%, 85%);
+  }
+
+  .bg-soft-red {
+    background-color: hsl(358, 79%, 66%);
+  }
+  .bg-pale-red {
+    background-color: hsl(357, 100%, 86%);
+  }
+
+  .bg-light-gray {
+    background-color: hsl(223, 19%, 93%);
+  }
+  .border-l-light-gray {
+    border-color: hsl(223, 19%, 93%);
+  }
+  .bg-very-light-gray {
+    background-color: hsl(228, 33%, 97%);
+  }
+  .border-dark-blue {
+    border-color: hsl(212, 24%, 26%);
+  }
+  .bg-moderate-blue {
+    background-color: hsl(238, 40%, 52%);
+  }
+  .bg-dark-light {
+    background-color: #e0e0e0;
+  }
+  .t-hidden{
+    display: none;
+  }
+}
+@layer components {
+  .btn {
+    @apply rounded-md text-white p-4 bg-blue-500;
+  }
+  .modal {
+    @apply fixed inset-0 bg-black/20 backdrop-blur-sm z-10;
+  }
+  * #app {
+    @apply bg-very-light-gray lg:p-10;
+  }
+  .chat-shadow {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  textarea {
+    @apply border border-dark-blue w-full appearance-none flex-grow flex p-2 h-20 text-sm rounded-md;
+    /* @apply border w-full appearance-none flex-grow flex p-2 h-20 text-sm rounded-md; */
+  }
+  .chat-container {
+    @apply py-2;
+  }
+
+  .chat-container.reply {
+    @apply pl-4 md:ml-9 border-l-2 my-0 border-l-light-gray;
+    @apply pl-4 md:ml-9 border-l-2 my-0;
+  }
+
+  .chat-component {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14);
+    @apply bg-white flex;
+    @apply flex-col-reverse py-5 px-5 gap-x-6 gap-y-4 rounded-lg;
+    /* @apply flex-col-reverse py-5 px-5 gap-x-6 gap-y-4 rounded-lg; */
+  }
+  .chat-component:not(.replying) {
+    @apply md:flex-row;
+  }
+  .chat-component:not(.replying) > div:first-child {
+    @apply flex justify-between items-center;
+  }
+  .score-input {
+    @apply h-10 w-28 md:h-28 md:w-10 flex flex-row md:flex-col flex-shrink md:flex-shrink-0 items-center justify-center bg-very-light-gray rounded-lg;
+  }
+  .score-input button {
+    @apply h-full w-2/5 md:h-2/5 md:w-full grid place-items-center text-greyish-blue hover:text-moderate-blue font-bold;
+  }
+  .score-input div {
+    @apply h-full w-3/5 md:h-3/5 md:w-full grid place-items-center font-bold text-moderate-blue bg-transparent;
+  }
+  .img-small{
+    @apply rounded-full cursor-pointer object-cover
+  }
+}
